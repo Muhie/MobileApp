@@ -34,8 +34,10 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App! ")), 
       body: Center(child: ElevatedButton (
+        
+        style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
         onPressed: (){
           Navigator.of(context)
           .push(
@@ -81,44 +83,94 @@ class _Page2State extends State<Page2> {
       body: Center(child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-        const Text("Welcome to my absolutely crazy app"),
-          ElevatedButton(onPressed: (){
+        const Text("Welcome To My Absolutely Crazy App!"),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
+            onPressed: (){
             Navigator.of(context)
-            .pop();
-          },
-          child: const Text("Stuff about Development life cycles and stuff")
+            .push(
+              MaterialPageRoute(
+                builder: (context) => const InfoPage1()
+              )
+            );
+            },
+          child: const Text("Agile Method")
           // dont forget to add attributes here later 
           ,),
-          ElevatedButton(onPressed: (){
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
+            onPressed: (){
             Navigator.of(context)
-            .pop();
-          },
-          child: const Text("Even More Stuff about Development life cycles and stuff")
+            .push(
+              MaterialPageRoute(
+                builder: (context) => const InfoPage2()
+              )
+            );
+            },
+          child: const Text("Waterfall Method")
           // dont forget to add attributes here later
           ,),
-          ElevatedButton(onPressed: (){
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
+            onPressed: (){
             Navigator.of(context)
-            .pop();
-          },
-          child: const Text("Even Even More Stuff about Development life cycles and stuff")
+            .push(
+              MaterialPageRoute(
+                builder: (context) => const InfoPage3()
+              )
+            );
+            },
+          child: const Text("Prototyping Model")
           // dont forget to add attributes here later
-          ,),
-          ElevatedButton(onPressed: (){
-            Navigator.of(context)
-            .pop();
-          },
-          child: const Text("Even Even Even More Stuff about Development life cycles and stuff")
-          // dont forget to add attributes here later
-          ,),
-          ElevatedButton(onPressed: (){
-            Navigator.of(context)
-            .pop();
-          },
-          child: const Text("Double Even Even Even More Stuff about Development life cycles and stuff")
-          // dont forget to add attributes here later
-          ,),                         
+          ,),                      
         ],
       )),
     );
   }
 }
+class InfoPage1 extends StatefulWidget {
+  const InfoPage1({ Key? key }) : super(key: key);
+
+  @override
+  _InfoPage1State createState() => _InfoPage1State();
+}
+
+class _InfoPage1State extends State<InfoPage1> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+    );
+  }
+}
+class InfoPage2 extends StatefulWidget {
+  const InfoPage2({ Key? key }) : super(key: key);
+
+  @override
+  _InfoPage2State createState() => _InfoPage2State();
+}
+
+class _InfoPage2State extends State<InfoPage2> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+    );
+  }
+}
+class InfoPage3 extends StatefulWidget {
+  const InfoPage3({ Key? key }) : super(key: key);
+
+  @override
+  _InfoPage3State createState() => _InfoPage3State();
+}
+
+class _InfoPage3State extends State<InfoPage3> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+    );
+  }
+}
+
