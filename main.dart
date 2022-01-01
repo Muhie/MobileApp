@@ -136,10 +136,28 @@ class InfoPage1 extends StatefulWidget {
 }
 
 class _InfoPage1State extends State<InfoPage1> {
+  String data = '';
+  fetchFileData() async{
+    String responseText;
+    responseText = await rootBundle.loadString('textFiles/textDemo.txt');
+    setState(() {
+      data = responseText;
+  });
+  }
+  @override
+  void initState() {
+    fetchFileData();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+      body: Padding( 
+      padding: const EdgeInsets.all(12.0),
+      child: Text(data))
+      
+
     );
   }
 }
