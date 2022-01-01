@@ -1,0 +1,14 @@
+The Waterfall Model.
+The waterfall model derives its
+name from its cascading effect from
+one phase to another.
+Each phase has a well-defined start
+and end point with identifiable
+deliverables.
+A slight evolution of the waterfall
+model allows you to move back to a
+previous stage as well as forwards-
+this reflects the fact that developers
+often have to rework earlier stages
+in light of knowledge gained as
+development progresses.

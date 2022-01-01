@@ -1,0 +1,19 @@
+The Spiral Model.
+The spiral model is a risk-driven
+development methodology. Any
+project has its own set of unique risks
+associated with it.
+The spiral model is more of a guide for
+development teams, allowing them to
+adopt elements of one or more other
+methodologies or models like waterfall or Agile.
+It is a common misconception that the
+spiral model is a fixed process that
+must be followed in the correct order.
+In reality, it is wholly dependant on the
+project and its unique risks.
+This model is better thought of as a
+process model generator, where
+decisions on the software development
+methodology are made based on the
+risks identified.

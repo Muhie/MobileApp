@@ -1,0 +1,10 @@
+What are Software Development Lifecycles?
+When developing a solution to a problem for a computer system, developers go through a number of distinct phases. This is known as a software development lifecyle. The arangement of these phases and how developers move form one phases to anothboth forwards and backwards is know as the software methodology or model.
+These stages include: Feasiblity, Requirments, Analysis and Design, Implementation, Testing, Deployment, Evaluation, Maintenance.
+Feasiblity: Is this problem even solvable?
+Requirments: Working out what the solution needs to do.
+Analysis and Design: Working out how the solution needs to do it.
+Testing: Checking if the code actually works.
+Deployment: Installing it into the target enviroment.
+Evaluation: Checking with the user - is the solution complete.
+Maintenance: Ensuring it continues to function properly after Deployment and patching and updating it if not.

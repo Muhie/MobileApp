@@ -1,0 +1,13 @@
+Agile Methood!
+Agile development refers to a group
+of methodologies (not a single one)
+that came about in the early 2000s.
+These methodologies focus on the
+idea that requirements will shift and
+change during development-this
+can only be dealt with by producing
+software in an iterative way.
+They are a more refined form of the
+older concepts.
+
+

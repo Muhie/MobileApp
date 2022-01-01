@@ -64,7 +64,7 @@ class _Page2State extends State<Page2> {
     String data = '';
   fetchFileData() async{
     String responseText;
-    responseText = await rootBundle.loadString('textFiles/textDemo.txt');
+    responseText = await rootBundle.loadString('textFiles/SDLC.txt');
     setState(() {
       data = responseText;
     });
@@ -94,7 +94,7 @@ class _Page2State extends State<Page2> {
               )
             );
             },
-          child: const Text("Agile Method")
+          child: const Text("What are System Development Lifecycles?")
           // dont forget to add attributes here later 
           ,),
           ElevatedButton(
@@ -107,7 +107,7 @@ class _Page2State extends State<Page2> {
               )
             );
             },
-          child: const Text("Waterfall Method")
+          child: const Text("Agile Model")
           // dont forget to add attributes here later
           ,),
           ElevatedButton(
@@ -120,7 +120,20 @@ class _Page2State extends State<Page2> {
               )
             );
             },
-          child: const Text("Prototyping Model")
+          child: const Text("Waterfall Model")
+          // dont forget to add attributes here later
+          ,),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
+            onPressed: (){
+            Navigator.of(context)
+            .push(
+              MaterialPageRoute(
+                builder: (context) => const InfoPage4()
+              )
+            );
+            },
+          child: const Text("Spiral Model")
           // dont forget to add attributes here later
           ,),                      
         ],
@@ -139,7 +152,7 @@ class _InfoPage1State extends State<InfoPage1> {
   String data = '';
   fetchFileData() async{
     String responseText;
-    responseText = await rootBundle.loadString('textFiles/textDemo.txt');
+    responseText = await rootBundle.loadString('textFiles/SDLC.txt');
     setState(() {
       data = responseText;
   });
@@ -161,6 +174,7 @@ class _InfoPage1State extends State<InfoPage1> {
     );
   }
 }
+//start
 class InfoPage2 extends StatefulWidget {
   const InfoPage2({ Key? key }) : super(key: key);
 
@@ -169,10 +183,28 @@ class InfoPage2 extends StatefulWidget {
 }
 
 class _InfoPage2State extends State<InfoPage2> {
+  String data = '';
+  fetchFileData() async{
+    String responseText;
+    responseText = await rootBundle.loadString('textFiles/AgileMethod.txt');
+    setState(() {
+      data = responseText;
+  });
+  }
+  @override
+  void initState() {
+    fetchFileData();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+      body: Padding( 
+      padding: const EdgeInsets.all(12.0),
+      child: Text(data))
+      
+
     );
   }
 }
@@ -184,11 +216,62 @@ class InfoPage3 extends StatefulWidget {
 }
 
 class _InfoPage3State extends State<InfoPage3> {
+  String data = '';
+  fetchFileData() async{
+    String responseText;
+    responseText = await rootBundle.loadString('textFiles/WaterFall.txt');
+    setState(() {
+      data = responseText;
+  });
+  }
+  @override
+  void initState() {
+    fetchFileData();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+      body: Padding( 
+      padding: const EdgeInsets.all(12.0),
+      child: Text(data))
+      
+
     );
   }
 }
+//stop
+class InfoPage4 extends StatefulWidget {
+  const InfoPage4({ Key? key }) : super(key: key);
 
+  @override
+  _InfoPage4State createState() => _InfoPage4State();
+}
+
+class _InfoPage4State extends State<InfoPage4> {
+  String data = '';
+  fetchFileData() async{
+    String responseText;
+    responseText = await rootBundle.loadString('textFiles/Spiral.txt');
+    setState(() {
+      data = responseText;
+  });
+  }
+  @override
+  void initState() {
+    fetchFileData();
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
+      body: Padding( 
+      padding: const EdgeInsets.all(12.0),
+      child: Text(data))
+      
+
+    );
+  }
+}
