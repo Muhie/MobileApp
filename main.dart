@@ -34,8 +34,8 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Muhies Mobile app!')), 
-      body: Center(child: ElevatedButton(
+      appBar: AppBar(title: const Text('Muhies Exceptional Mobile App!')), 
+      body: Center(child: ElevatedButton (
         onPressed: (){
           Navigator.of(context)
           .push(
@@ -44,7 +44,8 @@ class Page1 extends StatelessWidget {
             )
           );
         },
-        child: const Text("Click Here to open the menu"),
+
+        child: const Text("Click Here!"),
       )),
     );
   }
@@ -74,13 +75,31 @@ class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Muhies app page 2')),
-      body: Center(child: ElevatedButton(
-        onPressed: (){
-          Navigator.of(context)
-          .pop();
-        },
-        child: Text(data),
+      appBar: AppBar(
+        title: const Text('Muhies Fantastic Menu!')
+      ),
+      body: Center(child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ElevatedButton(onPressed: (){
+            print("raised button");
+          },
+          child: const Text("Stuff about Development life cycles and stuff")
+          // dont forget to add attributes here later 
+          ,),
+          ElevatedButton(onPressed: (){
+            print("raised button");
+          },
+          child: const Text("Even More Stuff about Development life cycles and stuff")
+          // dont forget to add attributes here later
+          ,),
+          ElevatedButton(onPressed: (){
+            print("raised button");
+          },
+          child: const Text("Even Even More Stuff about Development life cycles and stuff")
+          // dont forget to add attributes here later
+          ,),          
+        ],
       )),
     );
   }
