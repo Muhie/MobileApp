@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Theme data',
+      title: "Muhie's exceptional mobile app",
       theme: ThemeData(
         brightness: Brightness.light,
         /* light theme settings */
@@ -34,7 +34,7 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Muhies Exceptional Mobile App!')), 
+      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
       body: Center(child: ElevatedButton (
         onPressed: (){
           Navigator.of(context)
@@ -45,7 +45,7 @@ class Page1 extends StatelessWidget {
           );
         },
 
-        child: const Text("Click Here!"),
+        child: const Text("Welcome, Click Here!"),
       )),
     );
   }
@@ -76,29 +76,47 @@ class _Page2State extends State<Page2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Muhies Fantastic Menu!')
+        title: const Text("Muhie's Fantastic Menu!")
       ),
       body: Center(child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+        const Text("Welcome to my absolutely crazy app"),
           ElevatedButton(onPressed: (){
-            print("raised button");
+            Navigator.of(context)
+            .pop();
           },
           child: const Text("Stuff about Development life cycles and stuff")
           // dont forget to add attributes here later 
           ,),
           ElevatedButton(onPressed: (){
-            print("raised button");
+            Navigator.of(context)
+            .pop();
           },
           child: const Text("Even More Stuff about Development life cycles and stuff")
           // dont forget to add attributes here later
           ,),
           ElevatedButton(onPressed: (){
-            print("raised button");
+            Navigator.of(context)
+            .pop();
           },
           child: const Text("Even Even More Stuff about Development life cycles and stuff")
           // dont forget to add attributes here later
-          ,),          
+          ,),
+          ElevatedButton(onPressed: (){
+            Navigator.of(context)
+            .pop();
+          },
+          child: const Text("Even Even Even More Stuff about Development life cycles and stuff")
+          // dont forget to add attributes here later
+          ,),
+          ElevatedButton(onPressed: (){
+            Navigator.of(context)
+            .pop();
+          },
+          child: const Text("Double Even Even Even More Stuff about Development life cycles and stuff")
+          // dont forget to add attributes here later
+          ,),                         
         ],
       )),
     );
