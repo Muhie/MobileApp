@@ -165,17 +165,19 @@ class _InfoPage1State extends State<InfoPage1> {
   @override
   Widget build(BuildContext context) {
     final textscale = MediaQuery.of(context).textScaleFactor;
-    return Scaffold(
+        return Scaffold(
     appBar: AppBar(
     title: const Text("Muhie's Exceptional Mobile App!")),
-    body: Column(
-      mainAxisSize: MainAxisSize.min,
+    body: SingleChildScrollView(child: Column(
       children: [
-        Text(data,style: TextStyle(fontSize: 20.0*textscale)),
-        const Image(
-          image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
+         Text(data,style: TextStyle(fontSize: 20.0*textscale)),
+          const Image(
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
+          const Image(
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
       ]
       
+    )
     )
     );
   }
@@ -245,13 +247,21 @@ class _InfoPage3State extends State<InfoPage3> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
-      body: Padding( 
-      padding: const EdgeInsets.all(12.0),
-      child: Text(data))
+    final textscale = MediaQuery.of(context).textScaleFactor;
+        return Scaffold(
+    appBar: AppBar(
+    title: const Text("Muhie's Exceptional Mobile App!")),
+    body: SingleChildScrollView(child: Column(
+      children: [
+         Text(data,style: TextStyle(fontSize: 20.0*textscale)),
+          const Image(
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
+          const Image(
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
+      ]
       
-
+    )
+    )
     );
   }
 }
@@ -279,13 +289,21 @@ class _InfoPage4State extends State<InfoPage4> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Muhie's Exceptional Mobile App!")), 
-      body: Padding( 
-      padding: const EdgeInsets.all(12.0),
-      child: Text(data))
+    final textscale = MediaQuery.of(context).textScaleFactor;
+        return Scaffold(
+    appBar: AppBar(
+    title: const Text("Muhie's Exceptional Mobile App!")),
+    body: SingleChildScrollView(child: Column(
+      children: [
+         Text(data,style: TextStyle(fontSize: 20.0*textscale)),
+          const Image(
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
+          const Image(
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
+      ]
       
-
+    )
+    )
     );
   }
 }
