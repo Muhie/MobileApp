@@ -150,11 +150,15 @@ class InfoPage1 extends StatefulWidget {
 
 class _InfoPage1State extends State<InfoPage1> {
   String data = '';
+  String data2 = '';
   fetchFileData() async{
     String responseText;
+    String responseText2;
     responseText = await rootBundle.loadString('textFiles/SDLC.txt');
+    responseText2 = await rootBundle.loadString('textFiles/SDLC2.txt');
     setState(() {
       data = responseText;
+      data2 = responseText2;
   });
   }
   @override
@@ -174,7 +178,8 @@ class _InfoPage1State extends State<InfoPage1> {
           const Image(
         image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
           const Image(
-        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
+        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
+        Text(data2,style: TextStyle(fontSize: 20.0*textscale)),
       ]
       
     )
@@ -192,6 +197,7 @@ class InfoPage2 extends StatefulWidget {
 
 class _InfoPage2State extends State<InfoPage2> {
   String data = '';
+  String data2 = '';
   fetchFileData() async{
     String responseText;
     responseText = await rootBundle.loadString('textFiles/AgileMethod.txt');
@@ -233,11 +239,15 @@ class InfoPage3 extends StatefulWidget {
 
 class _InfoPage3State extends State<InfoPage3> {
   String data = '';
+  String data2 = '';
   fetchFileData() async{
     String responseText;
+    String responseText2;
     responseText = await rootBundle.loadString('textFiles/WaterFall.txt');
+    responseText2 = await rootBundle.loadString('textFiles/WaterFall2.txt');
     setState(() {
       data = responseText;
+      data2 = responseText2;
   });
   }
   @override
@@ -256,8 +266,7 @@ class _InfoPage3State extends State<InfoPage3> {
          Text(data,style: TextStyle(fontSize: 20.0*textscale)),
           const Image(
         image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
-          const Image(
-        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
+          Text(data2,style: TextStyle(fontSize: 20.0*textscale))
       ]
       
     )
@@ -275,11 +284,15 @@ class InfoPage4 extends StatefulWidget {
 
 class _InfoPage4State extends State<InfoPage4> {
   String data = '';
+  String data2 = '';
   fetchFileData() async{
     String responseText;
+    String responseText2;
     responseText = await rootBundle.loadString('textFiles/Spiral.txt');
+    responseText2 = await rootBundle.loadString('textFiles/Spiral2.txt');
     setState(() {
       data = responseText;
+      data2 = responseText2;
   });
   }
   @override
@@ -293,15 +306,15 @@ class _InfoPage4State extends State<InfoPage4> {
         return Scaffold(
     appBar: AppBar(
     title: const Text("Muhie's Exceptional Mobile App!")),
-    body: SingleChildScrollView(child: Column(
+    body: SingleChildScrollView(child: Align(alignment: Alignment.center, child: Column(
       children: [
          Text(data,style: TextStyle(fontSize: 20.0*textscale)),
           const Image(
         image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc')),
-          const Image(
-        image: NetworkImage('https://images.techopedia.com/definition/term-image/22193/software-development-life-cycle-sdlc'))
+        Text(data2,style: TextStyle(fontSize: 20.0*textscale))
       ]
       
+    )
     )
     )
     );
