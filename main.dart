@@ -143,7 +143,22 @@ class _Page2State extends State<Page2> {
             },
           child: const Text("        What exactly is the Spiral Model?        ")
           // dont forget to add attributes here later
-          ,)),                      
+          ,)),
+                    Padding(padding: EdgeInsets.all(20),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(shape: const StadiumBorder()),
+            onPressed: (){
+            Navigator.of(context)
+            .push(
+              MaterialPageRoute(
+                builder: (context) => const InfoPage5()
+              )
+            );
+            },
+          child: const Text("                        About This App!                        ")
+          // dont forget to add attributes here later
+          ,)),
+
         ],
       )),
     );
@@ -321,6 +336,48 @@ class _InfoPage4State extends State<InfoPage4> {
           image: AssetImage('assets/spiralmodelimg.jpg')),
         Text(data2,style: TextStyle(fontSize: 20.0*textscale))
       ]
+      
+
+      
+    )
+    )
+    )
+    );
+  }
+}
+class InfoPage5 extends StatefulWidget {
+  const InfoPage5({ Key? key }) : super(key: key);
+
+  @override
+  _InfoPage5State createState() => _InfoPage5State();
+}
+
+class _InfoPage5State extends State<InfoPage5> {
+  String data = '';
+  fetchFileData() async{
+    String responseText;
+    responseText = await rootBundle.loadString('textFiles/About.txt');
+    setState(() {
+      data = responseText;
+  });
+  }
+  @override
+  void initState() {
+    fetchFileData();
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    final textscale = MediaQuery.of(context).textScaleFactor;
+        return Scaffold(
+    appBar: AppBar(
+    title: const Text("Muhie's Exceptional Mobile App!")),
+    body: SingleChildScrollView(child: Align(alignment: Alignment.topLeft, child: Column(
+      children: [
+         Text(data,style: TextStyle(fontSize: 20.0*textscale)),
+      ]
+      
+
       
     )
     )

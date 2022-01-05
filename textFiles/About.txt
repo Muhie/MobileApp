@@ -1,0 +1,1 @@
+This app was created with google flutter by Muhie Al Haimus in 2021-2022! This is the first ever app I have ever made with google flutter. It uses dart for the front and back-end. This program works on all devices including IOS, ANDROID, WEB, LINUX, MAC AND WINDOWS. COPYRIGHT MUHIE INDUSTRIES LTD 2021-2022
